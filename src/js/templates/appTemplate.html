@@ -1,0 +1,17 @@
+<div id="interactiveWrapper">
+{{#if path === "all"}}
+	<!-- <div class="explainer">
+		<h1>Factcheck boxes for editorial debates</h1>
+		<p>These are all the factcheck cards that can be embedded into liveblogs and articles</p>
+		<p><strong>How to use:</strong> 
+	</div> -->
+{{/if}}
+<div class="path-{{path}}">
+	{{#each facts}}
+		{{#if path === id || path === "all"}}
+			{{>factCard}}
+		{{/if}}
+	{{/each}}
+
+</div>
+</div>

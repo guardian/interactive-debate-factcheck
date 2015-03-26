@@ -1,0 +1,28 @@
+<div class="factCardContainer">
+	<div class="factCard">
+		<h2 class="factTitle"><span>Factcheck</span> {{issue}}</h2>
+		<div class="contentContainer">
+			<div class="factContainer">
+				<h3 class="factQuote">{{{quote}}}</h3>
+				<!-- <h3 class="factQuote">Something should change now, because otherwise economy and stuff. And schooling, etc.</h3> -->
+				<p class="factSource">{{{quotesource}}}</p>
+			</div>
+			<div class="verdictContainer">
+				<h4 class="verdictTitle">Full Fact&rsquo;s verdict <span class="verdict-{{verdictcategory.toLowerCase()}}">{{{fullfactverdict}}}</span></h4>
+				<img class="verdictVisual" src="{{proofimagemobile}}" />
+				<div class="verdictText">
+					{{#each additionaltext}}
+						<p>{{{.}}}</p>
+					{{/each}}
+				</div>
+			</div>
+		</div>
+		<div class="fullFactLink">
+			<a href="{{linktoff}}" target="_blank" class="externalLink">Find out more on Fullfact.org</a>
+		</div>
+	</div>
+	{{#if path === "all"}}
+		<p class="embedlink">Embed this url in Composer: 
+		<input on-click="selectUrl" type="url" readonly value="http://interactive.guim.co.uk/2015/03/election-factcheck/embed/?fact={{id}}"></p>
+	{{/if}}
+</div>
