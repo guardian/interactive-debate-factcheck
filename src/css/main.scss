@@ -131,6 +131,9 @@ body,.element-interactive.interactive{
 		line-height:1.3em;
 		margin-top:10px;
 		font-size:14px;
+		p{
+			margin-bottom:0;
+		}
 	}
 	.fullFactLink{
 		margin-top:40px;
@@ -190,14 +193,17 @@ body,.element-interactive.interactive{
 		}
 	}
 
-	@media(min-width:480px){
+	@media(min-width:520px){
 		.verdictVisual{
-			width:280px;
-			float:left;
+			width:300px;
+			display:inline-block;
 		}
 		.verdictText{
 			margin-top:20px;
-			margin-left:300px;
+			display:inline-block;
+			width:206px;
+			vertical-align: bottom;
+			margin-left:10px;
 		}
 		.path-all{
 			.verdictVisual{
@@ -213,10 +219,9 @@ body,.element-interactive.interactive{
 	@media(min-width:560px){
 		.verdictVisual{
 			width:300px;
-			float:left;
 		}
 		.verdictText{
-			margin-left:320px;
+			width:246px;
 		}
 	}
 
@@ -229,6 +234,9 @@ body,.element-interactive.interactive{
 		}
 		.verdictTitle{
 			font-size:24px;
+		}
+		.verdictText{
+			width:285px;
 		}
 	}
 }
